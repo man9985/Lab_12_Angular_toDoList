@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+<head>
+<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.5/angular.min.js"></script>
+  <title>To Do List</title>
+</head>
+  
+  
+<body ng-app="myModule">
+      <div ng-controller="myController">
+        <div id="list">
+          <h2>To Do List:</h2>
+          <ul>
+            <li ng-repeat="do in toDo | orderBy: 'do'">{{do}}</li>
+          </ul>
+          
+          <input type="text" id="addBox" ng-model="Chore"/>
+          <button ng-click="addToDo(Chore)">Add</button> 
+        </div>     
+     </div>
+<script src="angularLab12.js"></script>
+</body>
+
+
+
+</html>
